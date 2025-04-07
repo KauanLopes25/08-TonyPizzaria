@@ -10,3 +10,22 @@ a{
 ul, ol, li{
     list-style: none;
 }
+body{
+    padding: 0px 80px;
+}
+header{    
+    position: absolute; /* Altera a camada e remove a referência do pai */
+    /* position: fixed;  */ /* Altera a camada, remove a referência do pai e deixa fixo na tela do usuário */
+    height: 60px;
+    width: calc(100% - 160px);
+    top: 60px;
+    background-color: lightblue;
+}
+main{
+    height: 700px; /* Temporário */
+    background-color: tomato;
+}
+footer{
+    height: 526px;
+    background-color: pink;
+}
