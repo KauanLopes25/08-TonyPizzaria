@@ -10,20 +10,57 @@ a{
 ul, ol, li{
     list-style: none;
 }
+:root{ 
+    /* Criação de variaveis globais */
+    --primary-color: #F07807;
+    --secondary-color: #FBDDC1;
+    --default-shadow: 0 4px 4px #0004;
+}
 body{
     padding: 0px 80px;
+    font-family: "Poppins", sans-serif; /* fonte da escrita retirada do modelo figma */
 }
 header{    
     position: absolute; /* Altera a camada e remove a referência do pai */
     /* position: fixed;  */ /* Altera a camada, remove a referência do pai e deixa fixo na tela do usuário */
-    height: 60px;
-    width: calc(100% - 160px);
-    top: 60px;
-    background-color: lightblue;
+    height: 60px; 
+    width: calc(100% - 160px); /* formula para retirar 160px do padding */
+    top: 60px; /* determina a posição inicial de cima para baixo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centraliza o botão de login */
+}
+header menu{
+    display: flex;
+    align-items: center; /* centraliza no eixo vertical(flexbox) */
+    gap: 48px; /* Distancia entre os conteudos do menu */
+    font-size: 16px; /* Tamanho do conteudo */
+}
+header li{
+    padding: 4px 8px;
+    transition: all 0.5s; /* delay para aparecer as configurações dos conteudos li */
+}
+header li:hover{
+    box-shadow: var(--default-shadow); /* o ultimo digito da cor hexadecimal determina transparencia */
+    background-color: var(--secondary-color)
+}
+header button{
+    height: 48px;
+    width: 120px;
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    border: none;
+    box-shadow: var(--default-shadow);
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    font-weight: 900; /* Aumenta a largura da fonte escrita, conteudo */
+    color: var(--primary-color);
 }
 main{
     height: 700px; /* Temporário */
-    background-color: tomato;
+    background-color: purple;
 }
 footer{
     height: 526px;
