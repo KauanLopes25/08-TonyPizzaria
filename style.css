@@ -11,20 +11,24 @@ ul, ol, li{
     list-style: none;
 }
 :root{ 
+    /*  */
     /* Criação de variaveis globais */
     --primary-color: #F07807;
     --secondary-color: #FBDDC1;
     --default-shadow: 0 4px 4px #0004;
+    --default-padding: 0px 80px;
 }
 body{
-    padding: 0px 80px;
     font-family: "Poppins", sans-serif; /* fonte da escrita retirada do modelo figma */
 }
 header{    
-    position: absolute; /* Altera a camada e remove a referência do pai */
+    /* position: absolute; Altera a camada e remove a referência do pai */
+    position: fixed; /* Altera a camada, remove a referência do pai e  */
+    padding: var(--default-padding);
     /* position: fixed;  */ /* Altera a camada, remove a referência do pai e deixa fixo na tela do usuário */
     height: 60px; 
-    width: calc(100% - 160px); /* formula para retirar 160px do padding */
+    /* width: calc(100% - 160px); formula para retirar 160px do padding */
+    width: 100%;
     top: 60px; /* determina a posição inicial de cima para baixo */
     display: flex;
     justify-content: space-between;
@@ -58,9 +62,100 @@ header button{
     font-weight: 900; /* Aumenta a largura da fonte escrita, conteudo */
     color: var(--primary-color);
 }
-main{
-    height: 700px; /* Temporário */
-    background-color: purple;
+section {
+    height: 100vh;
+    padding: var(--default-padding);
+}
+.home {
+    background-color: var(--secondary-color);
+    background-image: url(./img/bg-home.svg) ; /* url é uma funcao para adicionar imagem */
+    background-repeat: no-repeat; /* Cancela a repetição das imagens */
+    background-position: top right; /* alinha no todo e lado direito */
+    background-size: contain; /* Aumenta proporcionalmente altura e largura da imagem até a borda do container */
+    display: grid;
+    grid-template-rows: 70% 30%;
+}
+.hero {
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 64px;
+}
+.hero h2 {
+    font-size: 4rem;
+    font-weight: 400;
+    width: 558px;
+    margin-bottom: 64px; /* Aumentar a distancia entre o slogan e as opções de pizza */
+}
+.hero span {
+    color: var(--primary-color);
+}
+.container-pizzas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pizza {
+    /* Foi adicionado para os filhos absolutes conseguirem tirar o pai "pizza" como referência */
+    position: relative; /* Position relative é basicamente um position static porem com a capacidade de alterar os lados direitos, esquerdos, superior e inferior igual a um absolute */
+    display: flex;
+    border-radius: 12px;
+}
+.add-produto {
+    position: absolute;
+    right: -16px;
+    top: -16px;
+    display: grid;
+    place-content: center;
+    font-size: 32px;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 12px;
+    border: 2px solid white;
+    background-color: var(--primary-color);
+    opacity: 0; /* Torna o objeto transparente */
+    transition: 0.5s;
+}
+
+.pizza:hover .add-produto{
+    /* hover é uma funcionalidade */
+    opacity: 1; /* Torna o objeto aparente */
+
+}
+.container-info {
+    padding: 0px 12px;
+    display: flex;
+    background-color: #0008;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 36px;
+    border: 0 0 12px 12px;
+    align-items: center;
+    justify-content: space-between;
+}
+.container-info p {
+    width: 120px;
+    font-size: 12px;
+    color: white;
+}
+.container-info span {
+    display: grid;
+    place-content: center;
+    width: 57px;
+    height: 20px;
+    background-color: var(--primary-color);
+    font-size: 12px;
+    color: white;
+    border-radius: 6px;
+}
+.cardapio {
+    background-color: red;
+}
+.servicos {
+    background-color: yellow;
 }
 footer{
     height: 526px;
