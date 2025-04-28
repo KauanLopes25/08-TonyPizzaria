@@ -147,7 +147,7 @@ section {
     transition: 0.5s;
 }
 .pizza:hover .container-info{
-    /* hover é uma funcionalidade */
+    /* hover é uma funcionalidade que gerencia uma ação quando passamos o mouse em cima de um objeto */
     bottom: 0;
 }
 .container-info p {
@@ -166,7 +166,7 @@ section {
     border-radius: 6px;
 }
 .pizza:hover .container-info{
-    /* hover é uma funcionalidade */
+    /* hover é uma funcionalidade que gerencia uma ação quando passamos o mouse em cima de um objeto */
     bottom: 0;
 }
 .cardapio {
