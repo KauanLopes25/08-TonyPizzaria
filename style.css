@@ -32,6 +32,7 @@ header{
     top: 60px; /* determina a posição inicial de cima para baixo */
     display: flex;
     justify-content: space-between;
+    z-index: 999; /* alterado camada do menu para a mais alta para garantir que nada fique por cime do menu */
     align-items: center; /* Centraliza o botão de login */
 }
 header menu{
@@ -91,7 +92,7 @@ section {
 .hero span {
     color: var(--primary-color);
 }
-.container-pizzas {
+.container-produto {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -170,7 +171,62 @@ section {
     bottom: 0;
 }
 .cardapio {
-    background-color: red;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.titulo-secao {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.titulo-secao h3 {
+    font-size: 40px;
+    color: var(--primary-color);
+    text-transform: uppercase; /* Deixar a fonte maiuscula */
+    font-weight: 600; /* Aumentar a largura da escrita fonte */
+}
+.opcoes-cardapio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* Espalha uniforme e deixa um espaço no inicio e final da div */
+    height: 300px;
+    border-bottom: 4px solid var(--secondary-color);
+}
+.titulo-opcoes {
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary-color);
+}
+.titulo-opcoes h4 {
+    font-size: 1.5rem;
+    font-size: 600;
+}
+.titulo-opcoes a {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.opcoes-cardapio.bebida {
+    border: none;
+}
+.pizza.bebida {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border-radius: 4px;
+    padding: 16px;
+    transition: 0.5;
+}
+.pizza.bebida:hover {
+    box-shadow: 2px 2px 8px #CCC;
+}
+.pizza.bebida .valor {
+    color: var(--primary-color);
+    width: 100%;
+}
+.pizza.bebida .descricao {
+    font-size: 12px;
 }
 .servicos {
     background-color: yellow;
