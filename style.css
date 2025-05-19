@@ -427,3 +427,29 @@ footer{
        margin-bottom: 64px; 
     }
 }
+@media (max-width:768px){
+    .hero img{
+        display: none;
+    }
+    header img:nth-last-child(3) {
+            content: url("./img/tony-icon-white.svg");  
+    }
+    header {
+        position: absolute;
+        background-color: transparent;
+        top: 16px;
+        left: 0;
+        gap: 34px;
+        padding: 0px 12px;
+    }
+    header img:nth-last-child(3) {
+        width: 50%;
+    }
+    header button {
+        width: 120px;
+        height: 48px;
+    }
+    .home {
+        background-image: url(./img/background-mobile.svg) ; /* url é uma funcao para adicionar imagem */
+    }
+}
