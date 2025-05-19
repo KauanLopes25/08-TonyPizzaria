@@ -338,3 +338,36 @@ footer{
     font-weight: 300;
     font-style: italic;
 }
+
+@media (max-width:1024px){
+    header {
+        position: absolute;
+        background-color: transparent;
+        top: 60px;
+        left: 0;
+    }
+    header menu {
+        width: 100vw;
+        height: 64px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        background-color: var(--primary-color);
+        z-index: 999;
+        justify-content: space-evenly;
+    }
+    header li:hover{
+        color: var(--primary-color);
+    }
+    .home {
+        grid-template-rows: none;
+    }
+    .hero {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-bottom: 64px;
+    }
+    .home .container-produto {
+        display: none;
+    }
+}
