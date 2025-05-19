@@ -19,6 +19,9 @@ ul, ol, li{
     --default-shadow: 0 4px 4px #0004;
     --default-padding: 0px 80px;
 }
+html {
+    scroll-behavior: smooth;
+}
 body{
     font-family: "Poppins", sans-serif; /* fonte da escrita retirada do modelo figma */
 }
@@ -35,6 +38,7 @@ header{
     justify-content: space-between;
     z-index: 999; /* alterado camada do menu para a mais alta para garantir que nada fique por cime do menu */
     align-items: center; /* Centraliza o botão de login */
+    background-color: #fff5;
 }
 header menu{
     display: flex;
