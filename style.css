@@ -366,8 +366,64 @@ footer{
         flex-direction: column-reverse;
         align-items: center;
         padding-bottom: 64px;
+        padding-top: 64px;
     }
     .home .container-produto {
         display: none;
+    }
+    .container-produto {
+        gap: 16px;
+    }
+    .container-produto .pizza {
+        width: 100%;
+    }
+    /* .container-produto .pizza img {
+        width: 100%;
+    }  */
+    .container-produto .pizza:nth-child(3), /* nht-child remove  */
+    .container-produto .pizza:nth-child(4),
+    .container-produto .pizza:nth-child(5)
+    {
+        display: none;
+    }
+    .cardapio {
+        justify-content: center;
+        gap: 24px;
+    }
+    .pizza.bebida {
+        width: auto;
+    }
+    .opcoes-cardapio {
+        border-bottom: none;
+    }
+    .opcoes-servicos {
+        flex-direction: column;
+       gap: 24px;
+    }
+    .servico-card {
+        width: 100%;
+        height: 260px;
+        flex-wrap: wrap;
+    }
+    .servico-card p {
+        width: 60%;
+    }
+    .contatos-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 400px;
+        justify-content: center;
+    }
+    .contatos-item {
+        padding: 0;
+    }
+    .contatos-item:nth-child(2){
+        display: none;
+    }
+    .contatos-item.social {
+        align-items: end;
+    }
+    .creditos {
+       margin-bottom: 64px; 
     }
 }
